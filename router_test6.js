@@ -16,6 +16,11 @@ router.get('/404', async (ctx, next) => {
     ctx.response.body = '<h1>404 Not Found</h1>'
 })
 
+router.get('/:category/:title', function (ctx, next) {
+    console.log(ctx.params);
+    // => { category: 'hahah', title: 'bababa' }
+  });
+
  // 调用路由中间件
  app.use(router.routes())
 
