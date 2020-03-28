@@ -13,7 +13,6 @@ module.exports = {
     ctx.response.body = '<h1>HOME page /:id/:name</h1>'
   },
   login: async(ctx, next) => {
-    //app.js 里面已经指定了视图目录为view了。
     await ctx.render('home/login',{
       btnName: 'GoGoGo'
     })

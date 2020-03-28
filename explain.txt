@@ -1,12 +1,1 @@
-1，下载模板引擎  : npm i koa-nunjucks-2 -S
-
-
-2，app.js 文件里添加 代码
-
-app.use(nunjucks({
-  ext: 'html',
-  path: path.join(__dirname, 'views'),// 指定视图目录
-  nunjucksConfig: {
-    trimBlocks: true // 开启转义 防Xss
-  }
-}));
+安装 koa-static：   npm i koa-static -S
