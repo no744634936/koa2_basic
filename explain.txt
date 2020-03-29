@@ -123,3 +123,7 @@ module.exports = (app) => {
   app.use(bodyParser())
   app.use(miSend())
 }
+
+
+
+后面我们还会开发更多的中间件，比如日志记录、错误处理等，都会放在 middleware/ 目录下处理。
