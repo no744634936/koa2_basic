@@ -5,9 +5,12 @@ module.exports = {
     await ctx.render("home/index", {title: "iKcamp欢迎您"})
   },
   home: async(ctx, next) => {
-    console.log(ctx.request.query)
-    console.log(ctx.request.querystring)
-    ctx.response.body = '<h1>HOME page</h1>'
+    // console.log(ctx.request.query)
+    // console.log(ctx.request.querystring)
+    // ctx.response.body = '<h1>HOME page</h1>'
+
+    //为什么ctx有send方法是因为中间件mi-send/index.js里面为cts定义了这个方法。
+    ctx.send({status:200});
   },
   homeParams: async(ctx, next) => {
     console.log(ctx.params)
@@ -15,7 +18,7 @@ module.exports = {
   },
   login: async(ctx, next) => {
     await ctx.render('home/login', {
-      btnName: 'Go'
+      btnName: 'GoGoGo'
     })
   },
   register: async(ctx, next) => {
